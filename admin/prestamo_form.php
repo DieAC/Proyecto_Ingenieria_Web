@@ -1,8 +1,7 @@
 <?php
 require_once __DIR__ . "/../includes/auth_check.php";
 require_once __DIR__ . "/../config/conexion.php";
-include __DIR__ . "/../includes/nav_admin.php";
-include __DIR__ . "/../includes/header_public.php";
+include __DIR__ . "/../includes/header_admin.php";
 
 $tipos = $conn->query("SELECT id_tipo, nombre FROM tipo_material ORDER BY nombre");
 $cursos = $conn->query("SELECT id_curso, nombre, semestre, seccion FROM cursos ORDER BY nombre");

@@ -1,8 +1,7 @@
 <?php
 require_once __DIR__ . "/../includes/auth_check.php";
 require_once __DIR__ . "/../config/conexion.php";
-include __DIR__ . "/../includes/nav_admin.php";
-include __DIR__ . "/../includes/header_public.php";
+include __DIR__ . "/../includes/header_admin.php";
 
 echo "<h2>Materiales (unidades físicas)</h2>";
 echo "<p><a href='material_form.php'>+ Agregar unidad</a></p>";

@@ -5,5 +5,77 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f6f7fb;color:#222;margin
 .admin-nav{background:#eee;padding:8px;margin-bottom:10px}
 .table{width:100%;border-collapse:collapse}
 .table th,.table td{border:1px solid #ccc;padding:8px;text-align:left}
+.admin-header { background:#002b80; color:white; }
+.site-header h1 { margin:0; padding:8px; }
 form input, form select{padding:6px;margin-bottom:8px;width:300px}
 button{padding:8px 12px}
+.tabla {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+.tabla th, .tabla td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+.tabla th {
+  background-color: #004080;
+  color: white;
+}
+.btn {
+  background: #0078D7;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.btn:hover { background: #005fa3; }
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.anuncios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.anuncio {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.anuncio h3 {
+  margin-top: 0;
+  color: #004080;
+}
+
+.anuncio-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.tabla {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+.tabla th, .tabla td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.tabla th {
+  background-color: #004080;
+  color: white;
+}
+.tabla tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

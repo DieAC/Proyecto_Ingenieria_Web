@@ -88,9 +88,11 @@ CREATE TABLE detalle_prestamo (
 CREATE TABLE anuncios (
     id_anuncio INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(200) NOT NULL,
-    descripcion TEXT,
+    descripcion TEXT NOT NULL,
     imagen VARCHAR(255),
-    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    id_usuario INT,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
 );
 
 -- DATOS BASE: usuarios con correos y celular -----------------------
