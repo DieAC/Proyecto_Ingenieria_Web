@@ -56,13 +56,15 @@ if ($id) {
         ?>
     </select>
 
-    <label>Materiales a prestar:</label><br>
+    <label>Materiales a prestar:</label>
     <div class="materiales-lista">
     <?php
     $tipos = $conn->query("SELECT id_tipo, nombre FROM tipo_material ORDER BY nombre");
     while ($tipo = $tipos->fetch_assoc()) {
-        echo "<strong>{$tipo['nombre']}</strong><br>";
+        echo "<div class='materiales-grupo'>";
+        echo "<strong>{$tipo['nombre']}</strong>";
 
+        // Aquí empieza la lista interna
         $mats = $conn->query("
             SELECT id_material, codigo_material 
             FROM materiales 
@@ -72,21 +74,22 @@ if ($id) {
         ");
 
         if ($mats->num_rows == 0) {
-            echo "<em>Sin materiales disponibles</em><br>";
+            echo "<div class='items'><em>Sin materiales disponibles</em></div>";
         } else {
+            echo "<div class='items'>"; // 🔹 Aquí abrimos el contenedor
             while ($m = $mats->fetch_assoc()) {
                 echo "<label>
                         <input type='checkbox' name='materiales[]' value='{$m['id_material']}'>
                         {$m['codigo_material']}
-                      </label><br>";
+                      </label>";
             }
+            echo "</div>"; // 🔹 Cerramos el contenedor .items
         }
 
-        echo "<hr>"; // separa visualmente los tipos
+        echo "</div>"; // Cierra .materiales-grupo
     }
     ?>
     </div>
-
 
     <label>Fecha de préstamo:</label>
     <input type="datetime-local" name="fecha_prestamo" value="<?= $prestamo['fecha_prestamo'] ?>" required>
